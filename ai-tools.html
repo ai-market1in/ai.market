@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Tools - AI Market</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <!-- Google Analytics (optional – update ID) -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" />
+
+    <!-- Google Analytics (optional) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      function gtag(){ dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
     </script>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="logo-wrap">
         <img src="logo.png" class="logo" alt="AI Market logo" />
@@ -38,185 +41,147 @@
         </nav>
 
         <div class="header-actions">
-            <div class="lang-switch">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="te">TE</button>
-                <button class="lang-btn" data-lang="ta">TA</button>
-            </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
         </div>
     </div>
 </header>
 
+<!-- PAGE CONTENT -->
 <section class="page">
-    <h1 class="section-title" data-i18n="ai_title">AI Tools</h1>
-    <p class="section-subtitle" data-i18n="ai_subtitle">
-        These are the core services currently offered by AI Market. More tools will be added soon.
-        You can order any service directly via WhatsApp.
+    <h1 class="section-title">AI Tools</h1>
+    <p class="section-subtitle">
+        Below are the AI-powered services offered by AI Market.  
+        You can order any service instantly via WhatsApp.
     </p>
 
-    <!-- VIDEO TOOLS -->
-    <h2 style="margin-top:10px;" data-i18n="sec_video_title">🎬 AI Video Creation Tools</h2>
+    <!-- --------------------
+         AI VIDEO TOOLS
+    --------------------- -->
+    <h2 style="margin-top:20px;">🎬 AI Video Creation Tools</h2>
+
     <div class="grid-3" style="margin-top:12px;">
 
         <div class="tool-card">
-            <h3 data-i18n="reels_title">AI Reels & Shorts Creator</h3>
-            <p data-i18n="reels_desc">
-                Create 15–30 sec vertical videos from your song, photos and text. Perfect for Instagram, YouTube Shorts and WhatsApp status.
-            </p>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20to%20order%20AI%20Reels%20%26%20Shorts%20Creator%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Reels & Shorts Creator</h3>
+            <p>Create 15–30 sec vertical videos using your photos, songs and text.</p>
+            <a href="https://wa.me/919676142165?text=I%20want%20AI%20Reels%20%26%20Shorts"
+               class="btn-secondary" target="_blank">Order on WhatsApp</a>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="devotional_title">AI Devotional / Status Video</h3>
-            <p data-i18n="devotional_desc">
-                Devotional, spiritual and emotional status videos using bhakti songs, photos of gods, and smooth effects.
-            </p>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20Devotional%20or%20Status%20Videos."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Devotional / Status Video</h3>
+            <p>Create spiritual, devotional and emotional status videos with smooth effects.</p>
+            <a href="https://wa.me/919676142165?text=I%20want%20Devotional%20Video"
+               class="btn-secondary" target="_blank">Order on WhatsApp</a>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="cartoon_video_title">AI Cartoon Video</h3>
-            <p data-i18n="cartoon_video_desc">
-                Turn your photos into cartoon/animated style videos. Great for birthday wishes, kids content and fun reels.
-            </p>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Cartoon%20Video%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Cartoon Video</h3>
+            <p>Transform your photos into animated cartoon-style videos.</p>
+            <a href="https://wa.me/919676142165?text=I%20want%20Cartoon%20Video"
+               class="btn-secondary" target="_blank">Order on WhatsApp</a>
         </div>
 
     </div>
 
-    <!-- IMAGE TOOLS -->
-    <h2 style="margin-top:32px;" data-i18n="sec_image_title">🖼️ AI Image & Photo Tools</h2>
+    <!-- --------------------
+         AI IMAGE TOOLS
+    --------------------- -->
+    <h2 style="margin-top:32px;">🖼️ AI Image & Photo Tools</h2>
+
     <div class="grid-3" style="margin-top:12px;">
 
         <div class="tool-card">
-            <h3 data-i18n="cartoon_photo_title">AI Cartoon Photo Maker</h3>
-            <p data-i18n="cartoon_photo_desc">
-                Convert your single photo into a cartoon or illustration style image.
-            </p>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Cartoon%20Photo%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Cartoon Photo Maker</h3>
+            <p>Turn your photo into a cartoon or illustration style image.</p>
+            <a href="https://wa.me/919676142165?text=I%20want%20Cartoon%20Photo"
+               class="btn-secondary" target="_blank">Order on WhatsApp</a>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="portrait_title">AI Portrait Enhancer</h3>
-            <p data-i18n="portrait_desc">
-                Clean, sharpen and enhance face photos for DP, profile, thumbnails and posters.
-            </p>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Portrait%20Enhancer%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Portrait Enhancer</h3>
+            <p>Sharpen and enhance face clarity for DP, thumbnails or posters.</p>
+            <a href="https://wa.me/919676142165?text=I%20want%20Portrait%20Enhancement"
+               class="btn-secondary" target="_blank">Order on WhatsApp</a>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="bgchange_title">AI Background Changer</h3>
-            <p data-i18n="bgchange_desc">
-                Remove or replace background for photos – studio look, gradient, custom scenes and more.
-            </p>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20Background%20Remove%20or%20Change%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Background Changer</h3>
+            <p>Remove or replace background with studio, gradient or custom scenes.</p>
+            <a href="https://wa.me/919676142165?text=I%20want%20Background%20Change"
+               class="btn-secondary" target="_blank">Order on WhatsApp</a>
         </div>
 
     </div>
 
-    <!-- AUDIO TOOLS -->
-    <h2 style="margin-top:32px;" data-i18n="sec_audio_title">🎵 AI Audio & Music Tools</h2>
+    <!-- --------------------
+         AI AUDIO TOOLS
+    --------------------- -->
+    <h2 style="margin-top:32px;">🎵 AI Music & Audio Tools</h2>
+
     <div class="grid-3" style="margin-top:12px;">
 
         <div class="tool-card">
-            <h3 data-i18n="bgm_title">AI BGM Maker</h3>
-            <p data-i18n="bgm_desc">
-                Create custom background music (BGM) for your videos, intros, reels and ads.
-            </p>
-            <a href="bgm-maker.html" class="btn-secondary" style="margin-right:8px;" data-i18n="btn_learn_more">
-                Learn More
-            </a>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20BGM%20Maker%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI BGM Maker</h3>
+            <p>Create background music for intros, reels, videos and ads.</p>
+            <a href="bgm-maker.html" class="btn-secondary" style="margin-right:6px;">Learn More</a>
+            <a href="https://wa.me/919676142165?text=I%20want%20AI%20BGM"
+               class="btn-secondary" target="_blank">Order</a>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="vocal_title">AI Vocal Enhancer</h3>
-            <p data-i18n="vocal_desc">
-                Clean and enhance your recorded voice – reduce noise, improve clarity and volume.
-            </p>
-            <a href="vocal-enhancer.html" class="btn-secondary" style="margin-right:8px;" data-i18n="btn_learn_more">
-                Learn More
-            </a>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Vocal%20Enhancer%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Vocal Enhancer</h3>
+            <p>Clean and improve your voice recordings with noise reduction.</p>
+            <a href="vocal-enhancer.html" class="btn-secondary" style="margin-right:6px;">Learn More</a>
+            <a href="https://wa.me/919676142165?text=I%20want%20Vocal%20Enhancer"
+               class="btn-secondary" target="_blank">Order</a>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="music_title">AI Music Maker</h3>
-            <p data-i18n="music_desc">
-                Generate unique music tracks for your content without copyright issues.
-            </p>
-            <a href="music-maker.html" class="btn-secondary" style="margin-right:8px;" data-i18n="btn_learn_more">
-                Learn More
-            </a>
-            <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20AI%20Music%20Maker%20service."
-               class="btn-secondary" target="_blank" data-i18n="btn_order_whatsapp">
-               Order on WhatsApp
-            </a>
+            <h3>AI Music Maker</h3>
+            <p>Generate copyright-free music tracks for your content.</p>
+            <a href="music-maker.html" class="btn-secondary" style="margin-right:6px;">Learn More</a>
+            <a href="https://wa.me/919676142165?text=I%20want%20Music%20Maker"
+               class="btn-secondary" target="_blank">Order</a>
         </div>
 
     </div>
 
-    <!-- TEXT TOOLS -->
-    <h2 style="margin-top:32px;" data-i18n="sec_text_title">📝 AI Text & Script Tools (Coming Soon)</h2>
+    <!-- --------------------
+         AI TEXT TOOLS
+    --------------------- -->
+    <h2 style="margin-top:32px;">📝 AI Text Tools (Coming Soon)</h2>
+
     <div class="grid-3" style="margin-top:12px;">
 
         <div class="tool-card">
-            <h3 data-i18n="caption_title">AI Caption & Subtitle Generator</h3>
-            <p data-i18n="caption_desc">
-                Auto-generate captions and subtitles for your reels and videos.
-            </p>
-            <span class="tool-status" data-i18n="coming_soon">Coming Soon</span>
+            <h3>AI Caption Generator</h3>
+            <p>Automatic captions for your reels and videos.</p>
+            <span class="tool-status">Coming Soon</span>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="script_title">AI Script & Ideas Generator</h3>
-            <p data-i18n="script_desc">
-                Get ready-made scripts and ideas for reels, shorts and long videos.
-            </p>
-            <span class="tool-status" data-i18n="coming_soon">Coming Soon</span>
+            <h3>AI Script Generator</h3>
+            <p>Create video scripts and content ideas instantly.</p>
+            <span class="tool-status">Coming Soon</span>
         </div>
 
         <div class="tool-card">
-            <h3 data-i18n="adcopy_title">AI Ad Copy Maker</h3>
-            <p data-i18n="adcopy_desc">
-                Create compelling ad texts, post captions and headlines that convert viewers into buyers.
-            </p>
-            <span class="tool-status" data-i18n="coming_soon">Coming Soon</span>
+            <h3>AI Ad Copy Maker</h3>
+            <p>Generate social media post captions and ad text.</p>
+            <span class="tool-status">Coming Soon</span>
         </div>
 
     </div>
 </section>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20need%20support%20for%20my%20order."
-   class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">💬</a>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20need%20help."
+   class="whatsapp-float" target="_blank">💬</a>
 
+<!-- FOOTER -->
 <footer>
-    © 2025 AI Market · World’s Smart AI Platform
+    © 2025 AI Market · World’s Smart AI Platform  
     <br />
     <a href="terms.html">Terms</a> ·
     <a href="privacy.html">Privacy</a> ·
@@ -225,205 +190,25 @@
     <a href="cookies.html">Cookies</a>
 </footer>
 
-<!-- THEME + LANGUAGE SCRIPT FOR THIS PAGE -->
+<!-- THEME SCRIPT -->
 <script>
-  // Theme
-  (function () {
+(function () {
     const body = document.body;
-    const toggle = document.getElementById('themeToggle');
-    if (!toggle) return;
-    const savedTheme = localStorage.getItem('aimarket-theme');
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      toggle.textContent = '☀';
-    }
-    toggle.addEventListener('click', function () {
-      body.classList.toggle('light-theme');
-      const isLight = body.classList.contains('light-theme');
-      toggle.textContent = isLight ? '☀' : '🌙';
-      localStorage.setItem('aimarket-theme', isLight ? 'light' : 'dark');
-    });
-  })();
+    const toggle = document.getElementById("themeToggle");
 
-  // Translations for AI Tools page
-  (function () {
-    const translations = {
-      en: {
-        ai_title: 'AI Tools',
-        ai_subtitle: 'These are the core services currently offered by AI Market. More tools will be added soon. You can order any service directly via WhatsApp.',
-        sec_video_title: '🎬 AI Video Creation Tools',
-        sec_image_title: '🖼️ AI Image & Photo Tools',
-        sec_audio_title: '🎵 AI Audio & Music Tools',
-        sec_text_title: '📝 AI Text & Script Tools (Coming Soon)',
-
-        reels_title: 'AI Reels & Shorts Creator',
-        reels_desc: 'Create 15–30 sec vertical videos from your song, photos and text. Perfect for Instagram, YouTube Shorts and WhatsApp status.',
-
-        devotional_title: 'AI Devotional / Status Video',
-        devotional_desc: 'Devotional, spiritual and emotional status videos using bhakti songs, photos of gods, and smooth effects.',
-
-        cartoon_video_title: 'AI Cartoon Video',
-        cartoon_video_desc: 'Turn your photos into cartoon/animated style videos. Great for birthday wishes, kids content and fun reels.',
-
-        cartoon_photo_title: 'AI Cartoon Photo Maker',
-        cartoon_photo_desc: 'Convert your single photo into a cartoon or illustration style image.',
-
-        portrait_title: 'AI Portrait Enhancer',
-        portrait_desc: 'Clean, sharpen and enhance face photos for DP, profile, thumbnails and posters.',
-
-        bgchange_title: 'AI Background Changer',
-        bgchange_desc: 'Remove or replace background for photos – studio look, gradient, custom scenes and more.',
-
-        bgm_title: 'AI BGM Maker',
-        bgm_desc: 'Create custom background music (BGM) for your videos, intros, reels and ads.',
-
-        vocal_title: 'AI Vocal Enhancer',
-        vocal_desc: 'Clean and enhance your recorded voice – reduce noise, improve clarity and volume.',
-
-        music_title: 'AI Music Maker',
-        music_desc: 'Generate unique music tracks for your content without copyright issues.',
-
-        caption_title: 'AI Caption & Subtitle Generator',
-        caption_desc: 'Auto-generate captions and subtitles for your reels and videos.',
-
-        script_title: 'AI Script & Ideas Generator',
-        script_desc: 'Get ready-made scripts and ideas for reels, shorts and long videos.',
-
-        adcopy_title: 'AI Ad Copy Maker',
-        adcopy_desc: 'Create compelling ad texts, post captions and headlines that convert viewers into buyers.',
-
-        coming_soon: 'Coming Soon',
-        btn_learn_more: 'Learn More',
-        btn_order_whatsapp: 'Order on WhatsApp'
-      },
-      te: {
-        ai_title: 'AI టూల్స్',
-        ai_subtitle: 'ప్రస్తుతం AI Market అందిస్తున్న ప్రధాన సేవలు ఇవే. త్వరలో మరిన్ని టూల్స్ జోడించబడతాయి. మీరు ఏ సేవైనా వాట్సాప్ ద్వారా ఆర్డర్ చేయవచ్చు.',
-        sec_video_title: '🎬 AI వీడియో క్రియేషన్ టూల్స్',
-        sec_image_title: '🖼️ AI ఇమేజ్ & ఫోటో టూల్స్',
-        sec_audio_title: '🎵 AI ఆడియో & మ్యూజిక్ టూల్స్',
-        sec_text_title: '📝 AI టెక్ట్స్ & స్క్రిప్ట్ టూల్స్ (త్వరలో)',
-
-        reels_title: 'AI రీల్స్ & షార్ట్స్ క్రియేటర్',
-        reels_desc: 'మీ పాట, ఫోటోలు, టెక్ట్ తో 15–30 సెకన్ల వెర్టికల్ వీడియోలు. Instagram, YouTube Shorts, WhatsApp స్టేటస్ కోసం బెస్ట్.',
-
-        devotional_title: 'AI భక్తి / స్టేటస్ వీడియో',
-        devotional_desc: 'భక్తి పాటలు, దేవుళ్ల ఫోటోలు, సాఫ్ట్ ఎఫెక్ట్‌లతో భక్తి, స్పిరిచ్యువల్ & ఎమోషనల్ స్టేటస్ వీడియోలు.',
-
-        cartoon_video_title: 'AI కార్టూన్ వీడియో',
-        cartoon_video_desc: 'మీ ఫోటోలతో కార్టూన్ / యానిమేటెడ్ స్టైల్ వీడియోలు. బర్త్‌డే విషెస్, కిడ్స్ కాంటెంట్, ఫన్ రీల్స్ కోసం.',
-
-        cartoon_photo_title: 'AI కార్టూన్ ఫోటో మేకర్',
-        cartoon_photo_desc: 'ఒక ఫోటోను కార్టూన్ లేదా ఇలస్ట్రేషన్ స్టైలులో మార్చడం.',
-
-        portrait_title: 'AI పోర్ట్రైట్ ఎన్‌హాన్స్‌ర్',
-        portrait_desc: 'DP, ప్రొఫైల్, థంబ్‌నెయిల్ & పోస్టర్‌ల కోసం ఫేస్‌ను క్లీన్ చేసి, షార్ప్ చేసి అందంగా చేయడం.',
-
-        bgchange_title: 'AI బ్యాక్‌గ్రౌండ్ చేంజర్',
-        bgchange_desc: 'ఫోటో బ్యాక్‌గ్రౌండ్‌ను తీసేయడం లేదా స్టూడియో, గ్రేడియెంట్, కస్టమ్ సీన్‌లతో మార్చడం.',
-
-        bgm_title: 'AI BGM మేకర్',
-        bgm_desc: 'వీడియోలు, ఇంట్రోస్, రీల్స్ & అడ్స్ కోసం కస్టమ్ బ్యాక్‌గ్రౌండ్ మ్యూజిక్ (BGM) తయారు చేయడం.',
-
-        vocal_title: 'AI వోకల్ ఎన్‌హాన్స్‌ర్',
-        vocal_desc: 'మీ రికార్డ్ చేసిన వాయిస్‌ను క్లీన్ చేసి, నాయిస్ తగ్గించి, క్లారిటీ & వాల్యూం పెంచడం.',
-
-        music_title: 'AI మ్యూజిక్ మేకర్',
-        music_desc: 'కాపీరైట్ సమస్యలు లేకుండా మీ కంటెంట్ కోసం యూనిక్ మ్యూజిక్ ట్రాక్స్.',
-
-        caption_title: 'AI కాప్షన్ & సబ్‌టైటిల్ జనరేటర్',
-        caption_desc: 'మీ రీల్స్ & వీడియోలకు ఆటోమేటిక్ కాప్షన్‌లు, సబ్‌టైటిల్స్ తయారు చేయడం.',
-
-        script_title: 'AI స్క్రిప్ట్ & ఐడియాస్ జనరేటర్',
-        script_desc: 'రీల్స్, షార్ట్స్, లాంగ్ వీడియోల కోసం రెడీ-మేడ్ స్క్రిప్ట్స్ మరియు ఐడియాస్.',
-
-        adcopy_title: 'AI అడ్వర్టైజ్ కాపీ మేకర్',
-        adcopy_desc: 'జనం ఆకర్షించే అడ్వర్టైజ్ టెక్ట్స్, పోస్ట్ కాప్షన్స్, హెడ్‌లైన్స్.',
-
-        coming_soon: 'త్వరలో వస్తోంది',
-        btn_learn_more: 'వివరాలు చూడండి',
-        btn_order_whatsapp: 'వాట్సాప్‌లో ఆర్డర్ చేయండి'
-      },
-      ta: {
-        ai_title: 'AI கருவிகள்',
-        ai_subtitle: 'தற்போது AI Market வழங்கும் முக்கிய சேவைகள் இவை. விரைவில் மேலும் கருவிகள் சேர்க்கப்படும். எந்த சேவையையும் WhatsApp மூலம் ஆர்டர் செய்யலாம்.',
-        sec_video_title: '🎬 AI வீடியோ உருவாக்கு கருவிகள்',
-        sec_image_title: '🖼️ AI படம் & புகைப்பட கருவிகள்',
-        sec_audio_title: '🎵 AI ஆடியோ & இசை கருவிகள்',
-        sec_text_title: '📝 AI எழுத்து & ஸ்கிரிப்ட் கருவிகள் (விரைவில்)',
-
-        reels_title: 'AI ரீல்ஸ் & ஷார்ட்ஸ் கிரியேட்டர்',
-        reels_desc: 'உங்கள் பாடல், புகைப்படங்கள், எழுத்தை வைத்து 15–30 விநாடி நேர்மட்ட வீடியோக்கள். Instagram, YouTube Shorts, WhatsApp ஸ்டேட்டஸுக்கு ஏற்றது.',
-
-        devotional_title: 'AI பக்தி / ஸ்டேட்டஸ் வீடியோ',
-        devotional_desc: 'பக்தி பாடல்கள், தேவார படங்கள், மெல்லிய எஃபெக்ட்களுடன் பக்தி, ஆன்மீக & உணர்ச்சி வீடியோக்கள்.',
-
-        cartoon_video_title: 'AI கார்ட்டூன் வீடியோ',
-        cartoon_video_desc: 'உங்கள் புகைப்படங்களை கார்ட்டூன் / அனிமேஷன் ஸ்டைல் வீடியோவாக மாற்றுதல். பிறந்தநாள் வாழ்த்து, குழந்தைகள் கான்டெண்ட், ஃபன் ரீல்ஸ் எல்லாவற்றிற்கும் பொருத்தம்.',
-
-        cartoon_photo_title: 'AI கார்ட்டூன் போட்டோ மேக்கர்',
-        cartoon_photo_desc: 'ஒரு போட்டோவை கார்ட்டூன் அல்லது இலகு ஓவிய ஸ்டைலில் மாற்றுதல்.',
-
-        portrait_title: 'AI முகம் அழகாக்கி',
-        portrait_desc: 'DP, ப்ரொஃபைல், தம்ப்நெயில், போஸ்டர்களுக்காக முகத்தை சுத்தமாக, தெளிவாக, அழகாக மாற்றுதல்.',
-
-        bgchange_title: 'AI பின்னணி மாற்று கருவி',
-        bgchange_desc: 'புகைப்படத்தின் பின்னணியை நீக்கி ஸ்டுடியோ, கிரேடியென்ட், கஸ்டம் சீன் போன்றவற்றால் மாற்றுதல்.',
-
-        bgm_title: 'AI BGM மேக்கர்',
-        bgm_desc: 'வீடியோக்கள், இன்ட்ரோஸ், ரீல்ஸ் & விளம்பரங்களுக்காக தனிப்பட்ட பின்னணி இசை (BGM) தயாரித்தல்.',
-
-        vocal_title: 'AI வோக்கல் எண்ஹான்சர்',
-        vocal_desc: 'உங்கள் குரல் ரெக்கார்டிங்கை களைந்து, நாய்ஸ் குறைத்து, தெளிவும் ஒலியளவும் உயர்த்துதல்.',
-
-        music_title: 'AI மியூசிக் மேக்கர்',
-        music_desc: 'காப்புரிமை பிரச்சினை இல்லாமல், உங்கள் கான்டெண்ட்டுக்காக யூனிக் இசை ட்ராக்ஸ் உருவாக்குதல்.',
-
-        caption_title: 'AI கேப்ஷன் & சப்டைட்டில் ஜெனரேட்டர்',
-        caption_desc: 'உங்கள் ரீல்ஸ் & வீடியோக்களுக்கு தானாக கேப்ஷன், சப்டைட்டில் உருவாக்குதல்.',
-
-        script_title: 'AI ஸ்கிரிப்ட் & ஐடியாஸ் ஜெனரேட்டர்',
-        script_desc: 'ரீல்ஸ், ஷார்ட்ஸ், நீளமான வீடியோக்களுக்கான தயார் ஸ்கிரிப்ட் மற்றும் ஐடியாஸ்.',
-
-        adcopy_title: 'AI விளம்பர எழுத்து மேக்கர்',
-        adcopy_desc: 'கவர்ச்சியான விளம்பர டெக்ஸ்ட், போஸ்ட் கேப்ஷன், தலைப்புகள் உருவாக்குதல்.',
-
-        coming_soon: 'விரைவில் வருகிறது',
-        btn_learn_more: 'மேலும் பார்க்க',
-        btn_order_whatsapp: 'WhatsApp-ல் ஆர்டர் செய்யவும்'
-      }
-    };
-
-    const buttons = document.querySelectorAll('.lang-btn');
-    const elements = document.querySelectorAll('[data-i18n]');
-
-    if (!buttons.length || !elements.length) return;
-
-    const savedLang = localStorage.getItem('aimarket-lang') || 'en';
-
-    function applyLang(lang) {
-      const dict = translations[lang] || translations.en;
-
-      elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (!key || !dict[key]) return;
-        el.innerHTML = dict[key];
-      });
-
-      buttons.forEach(btn =>
-        btn.classList.toggle('active', btn.dataset.lang === lang)
-      );
-
-      document.documentElement.lang = (lang === 'te' || lang === 'ta') ? lang : 'en';
-      localStorage.setItem('aimarket-lang', lang);
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        body.classList.add("light-theme");
+        toggle.textContent = "☀";
     }
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    toggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        const light = body.classList.contains("light-theme");
+        toggle.textContent = light ? "☀" : "🌙";
+        localStorage.setItem("theme", light ? "light" : "dark");
     });
-
-    applyLang(savedLang);
-  })();
+})();
 </script>
 
 </body>
