@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Market - World's Smart AI Platform</title>
 
-    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Favicon (optional, if you have favicon.png) -->
     <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Google Analytics (replace G-XXXXXXXXXX with your GA4 ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 
 <body>
-
-    <!-- ================== HEADER ================== -->
+    <!-- HEADER (same on all pages, but Home link has class="active") -->
     <header>
         <div class="logo-wrap">
             <img src="logo.png" class="logo" alt="AI Market logo" />
@@ -24,21 +29,40 @@
             </div>
         </div>
 
-        <nav>
-            <a class="active" href="index.html">Home</a>
-            <a href="ai-tools.html">AI Tools</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="donate.html">Donate</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-right">
+            <nav>
+                <a class="active" href="index.html">Home</a>
+                <a href="ai-tools.html">AI Tools</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="donate.html">Donate</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="te">TE</button>
+                    <button class="lang-btn" data-lang="ta">TA</button>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    🌙
+                </button>
+            </div>
+        </div>
     </header>
 
-    <!-- ================== HERO SECTION ================== -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>Welcome to <span>AI Market</span></h1>
-            <p>The World’s Smart AI Platform — <b>Create</b> • <b>Earn</b> • <b>Donate</b></p>
+            <p id="hero-tagline"
+               data-en="The World’s Smart AI Platform — Create • Earn • Donate"
+               data-te="ప్రపంచంలో స్మార్ట్ AI ప్లాట్‌ఫార్మ్ — Create • Earn • Donate"
+               data-ta="உலகின் ஸ்மார்ட் AI தளம் — Create • Earn • Donate">
+                The World’s Smart AI Platform — <b>Create</b> • <b>Earn</b> • <b>Donate</b>
+            </p>
 
             <a href="ai-tools.html" class="btn-primary">Start Creating</a>
             <br /><br />
@@ -49,7 +73,7 @@
         </div>
     </section>
 
-    <!-- ================== FEATURES SECTION ================== -->
+    <!-- FEATURES -->
     <section class="features">
         <h2 class="section-title">What You Can Do With AI Market</h2>
 
@@ -76,7 +100,13 @@
         </div>
     </section>
 
-    <!-- ================== FOOTER ================== -->
+    <!-- FLOATING WHATSAPP SUPPORT -->
+    <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20need%20support%20for%20my%20order."
+       class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">
+        💬
+    </a>
+
+    <!-- FOOTER -->
     <footer>
         © 2025 AI Market · World’s Smart AI Platform
         <br />
@@ -86,6 +116,50 @@
         <a href="disclaimer.html">Disclaimer</a> ·
         <a href="cookies.html">Cookies</a>
     </footer>
+
+    <!-- THEME + LANGUAGE SCRIPT (include on all pages, ideally at bottom) -->
+    <script>
+      (function () {
+        const body = document.body;
+        const toggle = document.getElementById('themeToggle');
+        if (!toggle) return;
+
+        const savedTheme = localStorage.getItem('aimarket-theme');
+        if (savedTheme === 'light') {
+          body.classList.add('light-theme');
+          toggle.textContent = '☀';
+        }
+
+        toggle.addEventListener('click', function () {
+          body.classList.toggle('light-theme');
+          const isLight = body.classList.contains('light-theme');
+          toggle.textContent = isLight ? '☀' : '🌙';
+          localStorage.setItem('aimarket-theme', isLight ? 'light' : 'dark');
+        });
+      })();
+
+      (function () {
+        const buttons = document.querySelectorAll('.lang-btn');
+        const tagline = document.getElementById('hero-tagline');
+        if (!buttons.length || !tagline) return;
+
+        const savedLang = localStorage.getItem('aimarket-lang') || 'en';
+
+        function applyLang(lang) {
+          const text = tagline.dataset[lang] || tagline.dataset.en;
+          tagline.textContent = text;
+          buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+          document.documentElement.lang = lang === 'te' ? 'te' : (lang === 'ta' ? 'ta' : 'en');
+          localStorage.setItem('aimarket-lang', lang);
+        }
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+        });
+
+        applyLang(savedLang);
+      })();
+    </script>
 
 </body>
 </html>
