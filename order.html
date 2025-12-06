@@ -25,10 +25,10 @@
           <a href="index.html">Home</a>
           <a href="ai-tools.html">AI Tools</a>
           <a href="pricing.html">Pricing</a>
+          <a class="active" href="order.html">Order</a>
           <a href="donate.html">Donate</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
-          <a class="active" href="order.html">Order</a>
       </nav>
 
       <div class="header-actions">
@@ -46,17 +46,14 @@
   <div class="card" style="max-width:600px; margin:20px auto;">
       <form id="orderForm">
 
-          <!-- Name -->
           <label for="name">Your Name</label>
           <input type="text" id="name" required
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
 
-          <!-- WhatsApp Number -->
           <label for="phone">WhatsApp Number (with country code)</label>
           <input type="tel" id="phone" placeholder="+91XXXXXXXXXX" required
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
 
-          <!-- Service Type -->
           <label for="service">Select Service</label>
           <select id="service" required
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
@@ -73,7 +70,6 @@
               <option>Other (custom)</option>
           </select>
 
-          <!-- Duration -->
           <label for="duration">Approx. Video Length</label>
           <select id="duration"
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
@@ -83,7 +79,6 @@
               <option>Up to 60 seconds</option>
           </select>
 
-          <!-- Language -->
           <label for="language">Preferred Language (for text/voice)</label>
           <select id="language"
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
@@ -94,14 +89,12 @@
               <option>Mixed</option>
           </select>
 
-          <!-- Budget -->
           <label for="budget">Approx. Budget (optional)</label>
           <input type="number" id="budget" placeholder="e.g. 299"
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
 
-          <!-- Notes -->
           <label for="details">Project Details</label>
-          <textarea id="details" rows="4" placeholder="Example: I want a 30 sec devotional video for Sri Venkateswara with Telugu song and name title."
+          <textarea id="details" rows="4" placeholder="Example: I want a 30 sec devotional video with Telugu song and name title."
               style="width:100%;margin:6px 0 18px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;"></textarea>
 
           <button type="submit" class="btn-primary" style="width:100%;text-align:center;">
@@ -172,7 +165,7 @@ document.getElementById("orderForm").addEventListener("submit", function (e) {
     if (budget) msg += `Budget: ₹${budget}%0A`;
     if (details) msg += `%0ADetails:%0A${encodeURIComponent(details)}%0A`;
 
-    const ownerNumber = "919676142165"; // your WhatsApp
+    const ownerNumber = "919676142165";
     const url = `https://wa.me/${ownerNumber}?text=${msg}`;
 
     window.open(url, "_blank");
