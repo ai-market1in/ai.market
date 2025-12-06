@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Market - World's Smart AI Platform</title>
-
+    <title>AI Market – World’s Smart AI Platform</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.png" />
 </head>
-
 <body>
 
 <header>
@@ -19,19 +17,23 @@
             <span class="tagline">World’s Smart AI Platform</span>
         </div>
     </div>
-
     <div class="header-right">
         <nav>
             <a class="active" href="index.html">Home</a>
             <a href="ai-tools.html">AI Tools</a>
+            <a href="ai-video-tools.html">Video Tools</a>
+            <a href="ai-image-tools.html">Image Tools</a>
+            <a href="ai-music-tools.html">Music Tools</a>
             <a href="pricing.html">Pricing</a>
+            <a href="estimator.html">Estimator</a>
             <a href="order.html">Order</a>
             <a href="donate.html">Donate</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="faq.html">FAQ</a>
         </nav>
-
         <div class="header-actions">
             <button class="theme-toggle" id="themeToggle">🌙</button>
         </div>
@@ -40,48 +42,64 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Welcome to <span>AI Market</span></h1>
-
-        <p>The World’s Smart AI Platform — Create • Earn • Donate</p>
-
-        <a href="order.html" class="btn-primary">Start Creating</a>
-        <br /><br />
-        <a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20an%20AI%20video."
-           class="btn-secondary" target="_blank">
-           Order on WhatsApp
-        </a>
+        <h1>Welcome to <span class="brand-gradient">AI Market</span></h1>
+        <p>
+            World’s Smart AI Platform — we turn your songs, photos and ideas
+            into ready-to-post reels, shorts, images and music.
+        </p>
+        <div class="hero-actions">
+            <a href="order.html" class="btn-primary">Start Creating</a>
+            <a href="pricing.html" class="btn-secondary">View Plans</a>
+        </div>
+        <p class="hero-note">
+            Fast delivery · WhatsApp support · Razorpay payments
+        </p>
     </div>
 </section>
 
-<section class="features">
-    <h2 class="section-title">What You Can Do With AI Market</h2>
+<section class="page">
+    <h2 class="section-title">Our Main AI Tools</h2>
+    <p class="section-subtitle">
+        Choose what you need today. You can always discuss custom work over WhatsApp.
+    </p>
 
-    <div class="features-container">
-
-        <div class="card">
-            <h3>AI Video Tools</h3>
-            <p>Reels, Shorts, Devotional videos, Cartoon videos and more.</p>
+    <div class="grid-3">
+        <div class="tool-card">
+            <h3>AI Video Generator</h3>
+            <p>Create reels & shorts from songs, photos or simple ideas.</p>
+            <ul>
+                <li>Reels / Shorts / Status</li>
+                <li>Business promos & offers</li>
+                <li>Devotional & lyrical edits</li>
+            </ul>
+            <a href="ai-video-tools.html" class="btn-secondary">View Video Tools</a>
         </div>
 
-        <div class="card">
-            <h3>AI Image Tools</h3>
-            <p>Cartoon photos, portrait enhancement & background removal.</p>
+        <div class="tool-card">
+            <h3>AI Cartoon & Image Maker</h3>
+            <p>Turn your photos into cartoon, cleaned or enhanced portraits.</p>
+            <ul>
+                <li>Cartoon avatars</li>
+                <li>Portrait enhancement</li>
+                <li>Background change</li>
+            </ul>
+            <a href="ai-image-tools.html" class="btn-secondary">View Image Tools</a>
         </div>
 
-        <div class="card">
-            <h3>AI Music & Audio Tools</h3>
-            <p>BGM maker, audio clean-up, music generator and more.</p>
+        <div class="tool-card">
+            <h3>AI Music & BGM</h3>
+            <p>Custom music and audio cleanup for your videos & content.</p>
+            <ul>
+                <li>AI background music</li>
+                <li>Vocal enhancement</li>
+                <li>Intro / outro music</li>
+            </ul>
+            <a href="ai-music-tools.html" class="btn-secondary">View Music Tools</a>
         </div>
-
-        <div class="card">
-            <h3>AI Text Tools</h3>
-            <p>Captions, subtitles, scripts & ad copy (coming soon).</p>
-        </div>
-
     </div>
 </section>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20need%20support."
+<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20want%20to%20create%20AI%20content."
    class="whatsapp-float" target="_blank">💬</a>
 
 <footer>
@@ -98,13 +116,11 @@
 (function () {
     const body = document.body;
     const toggle = document.getElementById("themeToggle");
-
     const saved = localStorage.getItem("theme");
     if (saved === "light") {
         body.classList.add("light-theme");
         toggle.textContent = "☀";
     }
-
     toggle.addEventListener("click", () => {
         body.classList.toggle("light-theme");
         const light = body.classList.contains("light-theme");
