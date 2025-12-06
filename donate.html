@@ -4,26 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate - AI Market</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" />
+
+    <!-- Google Analytics (optional) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      function gtag(){ dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXXX");
     </script>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="logo-wrap">
-        <img src="logo.png" class="logo" alt="AI Market logo" />
+        <img src="logo.png" class="logo" alt="AI Market logo">
         <div class="logo-text">
             <span class="site-name">AI Market</span>
             <span class="tagline">World’s Smart AI Platform</span>
         </div>
     </div>
+
     <div class="header-right">
         <nav>
             <a href="index.html">Home</a>
@@ -33,49 +39,71 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
+
         <div class="header-actions">
-            <div class="lang-switch">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="te">TE</button>
-                <button class="lang-btn" data-lang="ta">TA</button>
-            </div>
             <button class="theme-toggle" id="themeToggle">🌙</button>
         </div>
     </div>
 </header>
 
-<section class="page donate-section">
+<!-- DONATE SECTION -->
+<section class="page">
     <h1 class="section-title">Support AI Market</h1>
     <p class="section-subtitle">
-        Your donation helps us keep building smart AI tools for creators, small businesses, and students.
+        Your contribution helps us build more AI tools and offer free features to users.
+        <br>Choose any donation amount below.
     </p>
 
-    <div class="donate-container">
+    <div class="price-grid">
+
+        <!-- 99 Donation -->
         <div class="donate-card">
-            <h2>Donate via Razorpay Link</h2>
-            <p class="upi-text">Click the button below and enter any amount.</p>
-            <a href="https://rzp.io/rzp/donateaimarket" class="btn-primary" target="_blank">
-                Donate with Razorpay
-            </a>
-            <p class="secure-note">Payments are processed securely through Razorpay.</p>
+            <h2>₹99 Support</h2>
+            <p>A small contribution to help us grow.</p>
+            <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary" target="_blank">Donate ₹99</a>
         </div>
 
+        <!-- 299 Donation -->
         <div class="donate-card">
-            <h2>Small Support Packs</h2>
-            <p>Quick one-tap support amounts:</p>
-            <ul>
-                <li><a href="https://rzp.io/rzp/MoQmtvPr" target="_blank">₹99 Support</a></li>
-                <li><a href="https://rzp.io/rzp/mMXyAH0p" target="_blank">₹299 Support</a></li>
-                <li><a href="https://rzp.io/rzp/67BhfxGW" target="_blank">₹999 Support</a></li>
-            </ul>
-            <p class="secure-note">Thank you for helping AI Market grow 💙</p>
+            <h2>₹299 Support</h2>
+            <p>Support development of new features and tools.</p>
+            <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank">Donate ₹299</a>
         </div>
+
+        <!-- 999 Donation -->
+        <div class="donate-card">
+            <h2>₹999 Support</h2>
+            <p>Big support for long-term development and upgrades.</p>
+            <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank">Donate ₹999</a>
+        </div>
+
     </div>
+
+    <br><br>
+    <h2 style="text-align:center;">Custom Donation</h2>
+    <p style="text-align:center;opacity:0.8;">Enter your own amount and donate securely.</p>
+
+    <div class="donate-card" style="max-width:400px;margin:auto;margin-top:20px;">
+        <input type="number" id="customAmount" placeholder="Enter amount (₹)" style="
+            width:100%;
+            padding:12px;
+            margin-bottom:10px;
+            border-radius:8px;
+            border:1px solid #334155;
+            background:#0f172a;
+            color:#fff;
+        ">
+
+        <a id="customPayBtn" href="#" class="btn-primary" target="_blank">Donate</a>
+    </div>
+
 </section>
 
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20donation."
-   class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">💬</a>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20need%20help%20with%20donations."
+   class="whatsapp-float" target="_blank">💬</a>
 
+<!-- FOOTER -->
 <footer>
     © 2025 AI Market · World’s Smart AI Platform
     <br />
@@ -86,40 +114,37 @@
     <a href="cookies.html">Cookies</a>
 </footer>
 
+<!-- THEME + CUSTOM DONATION SCRIPT -->
 <script>
-  (function () {
+// Theme toggle
+(function () {
     const body = document.body;
-    const toggle = document.getElementById('themeToggle');
-    if (!toggle) return;
-    const savedTheme = localStorage.getItem('aimarket-theme');
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      toggle.textContent = '☀';
-    }
-    toggle.addEventListener('click', function () {
-      body.classList.toggle('light-theme');
-      const isLight = body.classList.contains('light-theme');
-      toggle.textContent = isLight ? '☀' : '🌙';
-      localStorage.setItem('aimarket-theme', isLight ? 'light' : 'dark');
-    });
-  })();
+    const toggle = document.getElementById("themeToggle");
 
-  (function () {
-    const buttons = document.querySelectorAll('.lang-btn');
-    const tagline = document.getElementById('hero-tagline');
-    const savedLang = localStorage.getItem('aimarket-lang') || 'en';
-    function applyLang(lang) {
-      if (tagline) {
-        const text = tagline.dataset[lang] || tagline.dataset.en;
-        tagline.textContent = text;
-      }
-      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-      document.documentElement.lang = (lang === 'te' || lang === 'ta') ? lang : 'en';
-      localStorage.setItem('aimarket-lang', lang);
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        body.classList.add("light-theme");
+        toggle.textContent = "☀";
     }
-    buttons.forEach(btn => btn.addEventListener('click', () => applyLang(btn.dataset.lang)));
-    applyLang(savedLang);
-  })();
+
+    toggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        const light = body.classList.contains("light-theme");
+        toggle.textContent = light ? "☀" : "🌙";
+        localStorage.setItem("theme", light ? "light" : "dark");
+    });
+})();
+
+// Custom donation button
+document.getElementById("customPayBtn").addEventListener("click", function(e) {
+    const amount = document.getElementById("customAmount").value.trim();
+    if (!amount || amount < 1) {
+        alert("Please enter a valid amount.");
+        e.preventDefault();
+        return;
+    }
+    this.href = `https://rzp.io/rzp/donateaimarket?amount=${amount}`;
+});
 </script>
 
 </body>
