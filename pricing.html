@@ -4,92 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing - AI Market</title>
-
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.png" />
 </head>
 
 <body>
-
 <header>
-    <div class="logo-wrap">
-        <img src="logo.png" class="logo" alt="AI Market logo" />
-        <div class="logo-text">
-            <span class="site-name">AI Market</span>
-            <span class="tagline">World’s Smart AI Platform</span>
-        </div>
-    </div>
-    <div class="header-right">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="ai-tools.html">AI Tools</a>
-            <a href="ai-video-tools.html">Video Tools</a>
-            <a href="ai-image-tools.html">Image Tools</a>
-            <a href="ai-music-tools.html">Music Tools</a>
-            <a class="active" href="pricing.html">Pricing</a>
-            <a href="estimator.html">Estimator</a>
-            <a href="order.html">Order</a>
-            <a href="donate.html">Donate</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-        </nav>
-        <div class="header-actions">
-            <button class="theme-toggle" id="themeToggle">🌙</button>
-        </div>
-    </div>
+  <div class="header-inner">
+      <div class="logo-wrap">
+          <img src="logo.png" class="logo" alt="AI Market logo" />
+          <div class="logo-text">
+              <span class="site-name">AI Market</span>
+              <span class="tagline">World’s Smart AI Platform</span>
+          </div>
+      </div>
+      <div class="header-right">
+          <button class="theme-toggle" id="themeToggle">🌙</button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      </div>
+  </div>
+
+  <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="ai-tools.html">AI Tools</a>
+      <a class="active" href="pricing.html">Pricing</a>
+      <a href="donate.html">Donate</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <section class="page">
     <h1 class="section-title">Pricing Plans</h1>
-
     <p class="section-subtitle">
-        Choose a plan that matches your content needs. All payments are securely processed via Razorpay.
-        <br />
-        <a href="estimator.html"
-           class="btn-secondary"
-           style="margin-top:12px;display:inline-block;">
-            Open Price Estimator
-        </a>
+        Choose a plan that matches your content needs.  
+        All payments are securely processed via Razorpay.
     </p>
 
     <div class="price-grid">
-
         <div class="price-card">
             <span class="badge">Starter</span>
             <h2>Basic Reel</h2>
             <div class="price-amount">₹99</div>
-            <p>Perfect for 1 simple reel or short status video.</p>
-
+            <p>Perfect for one simple reel or short status video.</p>
             <ul>
                 <li>Up to 15 seconds</li>
-                <li>1 audio/song</li>
+                <li>1 audio / song</li>
                 <li>Basic transitions & effects</li>
             </ul>
-
-            <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary" target="_blank">
-                Pay ₹99
-            </a>
+            <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary" target="_blank">Pay ₹99</a>
         </div>
 
         <div class="price-card">
             <span class="badge">Most Popular</span>
             <h2>Pro Creator</h2>
             <div class="price-amount">₹299</div>
-            <p>Ideal for regular content creators & small businesses.</p>
-
+            <p>Ideal for regular creators and small businesses.</p>
             <ul>
                 <li>Up to 30 seconds</li>
                 <li>Advanced effects & motion</li>
                 <li>Custom text & branding</li>
                 <li>1 free revision</li>
             </ul>
-
-            <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank">
-                Pay ₹299
-            </a>
+            <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank">Pay ₹299</a>
         </div>
 
         <div class="price-card">
@@ -97,17 +74,13 @@
             <h2>Brand Package</h2>
             <div class="price-amount">₹999</div>
             <p>For brands, agencies and heavy usage.</p>
-
             <ul>
                 <li>Up to 60 seconds</li>
                 <li>Multiple scenes & variations</li>
                 <li>Priority delivery</li>
                 <li>Advanced customization</li>
             </ul>
-
-            <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank">
-                Pay ₹999
-            </a>
+            <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank">Pay ₹999</a>
         </div>
     </div>
 </section>
@@ -116,34 +89,42 @@
    class="whatsapp-float" target="_blank">💬</a>
 
 <footer>
-    © 2025 AI Market · World’s Smart AI Platform <br>
+    © 2025 AI Market · World’s Smart AI Platform<br />
     <a href="terms.html">Terms</a> ·
     <a href="privacy.html">Privacy</a> ·
     <a href="refund.html">Refund Policy</a> ·
     <a href="disclaimer.html">Disclaimer</a> ·
-    <a href="cookies.html">Cookies</a> ·
-    <a href="faq.html">FAQ</a>
+    <a href="cookies.html">Cookies</a>
 </footer>
 
 <script>
 (function () {
-    const body = document.body;
-    const toggle = document.getElementById("themeToggle");
+    const body   = document.body;
+    const themeToggle = document.getElementById("themeToggle");
+    const menuToggle  = document.getElementById("menuToggle");
+    const nav         = document.getElementById("mainNav");
 
     const saved = localStorage.getItem("theme");
     if (saved === "light") {
         body.classList.add("light-theme");
-        toggle.textContent = "☀";
+        if (themeToggle) themeToggle.textContent = "☀";
     }
 
-    toggle.addEventListener("click", () => {
-        body.classList.toggle("light-theme");
-        const light = body.classList.contains("light-theme");
-        toggle.textContent = light ? "☀" : "🌙";
-        localStorage.setItem("theme", light ? "light" : "dark");
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            body.classList.toggle("light-theme");
+            const light = body.classList.contains("light-theme");
+            themeToggle.textContent = light ? "☀" : "🌙";
+            localStorage.setItem("theme", light ? "light" : "dark");
+        });
+    }
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+    }
 })();
 </script>
-
 </body>
 </html>
