@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - AI Market</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" />
+</head>
+
+<body>
+
+<header>
+    <div class="logo-wrap">
+        <img src="logo.png" class="logo" alt="AI Market logo" />
+        <div class="logo-text">
+            <span class="site-name">AI Market</span>
+            <span class="tagline">World’s Smart AI Platform</span>
+        </div>
+    </div>
+
+    <div class="header-right">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ai-tools.html">AI Tools</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="order.html">Order</a>
+            <a href="donate.html">Donate</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a class="active" href="faq.html">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </div>
+</header>
+
+<section class="page">
+    <h1 class="section-title">Frequently Asked Questions</h1>
+    <p class="section-subtitle">
+        Quick answers about AI Market services, delivery time, languages and payments.
+    </p>
+
+    <div class="card" style="margin-top:20px;">
+
+        <h2>1. What services does AI Market provide?</h2>
+        <p>
+            We create AI-powered videos, reels, shorts, cartoon videos, cartoon photos,
+            portrait enhancement, background change, BGM/music, vocal enhancement and more.
+            New tools are added regularly.
+        </p>
+
+        <br>
+
+        <h2>2. How do I place an order?</h2>
+        <p>
+            You can place an order in two ways:
+        </p>
+        <ul style="margin-top:6px;">
+            <li>Use the <strong>Order</strong> page on the website and submit the form (WhatsApp opens automatically).</li>
+            <li>Or directly message us on WhatsApp with your requirements.</li>
+        </ul>
+
+        <br>
+
+        <h2>3. How long does delivery take?</h2>
+        <p>
+            Standard delivery time is usually between <strong>24–72 hours</strong>, depending on:
+            length of the video, complexity, and current queue.
+            For urgent work, contact us on WhatsApp and we will tell you the fastest option.
+        </p>
+
+        <br>
+
+        <h2>4. What formats do you provide?</h2>
+        <p>
+            Most videos are delivered in <strong>MP4</strong> format, vertical 9:16 for reels/shorts.
+            Images are usually provided in <strong>PNG/JPEG</strong>.
+            If you need a specific format or resolution, mention it in your order.
+        </p>
+
+        <br>
+
+        <h2>5. Can you work in any language?</h2>
+        <p>
+            Yes. AI Market is a worldwide service.  
+            You can request content in any language (English, Spanish, Telugu, Tamil, Hindi, Arabic, Japanese, etc.).
+        </p>
+
+        <br>
+
+        <h2>6. Do you offer revisions?</h2>
+        <p>
+            For most paid orders, we offer <strong>one basic revision</strong> for small changes
+            (text, spelling, timing adjustments).  
+            Large changes or full re-makes may require an additional charge.
+        </p>
+
+        <br>
+
+        <h2>7. What payment methods do you accept?</h2>
+        <p>
+            Payments are processed securely through Razorpay or other supported methods.
+            Depending on your country, you may be able to pay via UPI, card, net banking or wallet.
+        </p>
+
+        <br>
+
+        <h2>8. Do you provide refunds?</h2>
+        <p>
+            Because our services are digital and custom-made, we follow our
+            <a href="refund.html">Refund Policy</a>.  
+            Refunds are possible only in special cases (for example: order not delivered).
+        </p>
+
+        <br>
+
+        <h2>9. Can I use your videos for commercial purposes?</h2>
+        <p>
+            Yes, in most cases you may use the content for your social media, brand or business.
+            However, you are responsible for providing copyrights for music, images or logos you send to us.
+        </p>
+
+        <br>
+
+        <h2>10. How can I contact you for support?</h2>
+        <p>
+            You can use the <a href="contact.html">Contact</a> page,
+            or message us directly on WhatsApp: <strong>+91 96761 42165</strong>.
+        </p>
+
+    </div>
+</section>
+
+<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20your%20services."
+   class="whatsapp-float" target="_blank">💬</a>
+
+<footer>
+    © 2025 AI Market · World’s Smart AI Platform <br>
+    <a href="terms.html">Terms</a> ·
+    <a href="privacy.html">Privacy</a> ·
+    <a href="refund.html">Refund Policy</a> ·
+    <a href="disclaimer.html">Disclaimer</a> ·
+    <a href="cookies.html">Cookies</a> ·
+    <a href="faq.html">FAQ</a>
+</footer>
+
+<script>
+(function () {
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        body.classList.add("light-theme");
+        toggle.textContent = "☀";
+    }
+
+    toggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        const light = body.classList.contains("light-theme");
+        toggle.textContent = light ? "☀" : "🌙";
+        localStorage.setItem("theme", light ? "light" : "dark");
+    });
+})();
+</script>
+
+</body>
+</html>
