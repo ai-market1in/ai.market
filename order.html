@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order AI Service - AI Market</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" />
+</head>
+
+<body>
+
+<header>
+  <div class="logo-wrap">
+      <img src="logo.png" class="logo" alt="AI Market logo" />
+      <div class="logo-text">
+          <span class="site-name">AI Market</span>
+          <span class="tagline">World’s Smart AI Platform</span>
+      </div>
+  </div>
+
+  <div class="header-right">
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="ai-tools.html">AI Tools</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="donate.html">Donate</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="active" href="order.html">Order</a>
+      </nav>
+
+      <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle">🌙</button>
+      </div>
+  </div>
+</header>
+
+<section class="page">
+  <h1 class="section-title">Order AI Service</h1>
+  <p class="section-subtitle">
+    Fill this form and we’ll create a WhatsApp message for you automatically.
+  </p>
+
+  <div class="card" style="max-width:600px; margin:20px auto;">
+      <form id="orderForm">
+
+          <!-- Name -->
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required
+              style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
+
+          <!-- WhatsApp Number -->
+          <label for="phone">WhatsApp Number (with country code)</label>
+          <input type="tel" id="phone" placeholder="+91XXXXXXXXXX" required
+              style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
+
+          <!-- Service Type -->
+          <label for="service">Select Service</label>
+          <select id="service" required
+              style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
+              <option value="">-- Choose a service --</option>
+              <option>AI Reels & Shorts</option>
+              <option>Devotional / Status Video</option>
+              <option>Cartoon Video</option>
+              <option>Cartoon Photo</option>
+              <option>Portrait Enhancement</option>
+              <option>Background Change</option>
+              <option>AI BGM Maker</option>
+              <option>AI Vocal Enhancer</option>
+              <option>AI Music Maker</option>
+              <option>Other (custom)</option>
+          </select>
+
+          <!-- Duration -->
+          <label for="duration">Approx. Video Length</label>
+          <select id="duration"
+              style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
+              <option value="">Not sure</option>
+              <option>Up to 15 seconds</option>
+              <option>Up to 30 seconds</option>
+              <option>Up to 60 seconds</option>
+          </select>
+
+          <!-- Language -->
+          <label for="language">Preferred Language (for text/voice)</label>
+          <select id="language"
+              style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
+              <option>English</option>
+              <option>Telugu</option>
+              <option>Tamil</option>
+              <option>Hindi</option>
+              <option>Mixed</option>
+          </select>
+
+          <!-- Budget -->
+          <label for="budget">Approx. Budget (optional)</label>
+          <input type="number" id="budget" placeholder="e.g. 299"
+              style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
+
+          <!-- Notes -->
+          <label for="details">Project Details</label>
+          <textarea id="details" rows="4" placeholder="Example: I want a 30 sec devotional video for Sri Venkateswara with Telugu song and name title."
+              style="width:100%;margin:6px 0 18px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;"></textarea>
+
+          <button type="submit" class="btn-primary" style="width:100%;text-align:center;">
+              Create WhatsApp Order
+          </button>
+      </form>
+  </div>
+
+  <p style="text-align:center;font-size:13px;opacity:0.8;margin-top:8px;">
+    You will be redirected to WhatsApp chat with AI Market with your filled details.
+  </p>
+</section>
+
+<a href="https://wa.me/919676142165" class="whatsapp-float" target="_blank">💬</a>
+
+<footer>
+  © 2025 AI Market · World’s Smart AI Platform <br>
+  <a href="terms.html">Terms</a> ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="refund.html">Refund Policy</a> ·
+  <a href="disclaimer.html">Disclaimer</a> ·
+  <a href="cookies.html">Cookies</a>
+</footer>
+
+<script>
+// Theme toggle
+(function () {
+    const body = document.body;
+    const toggle = document.getElementById("themeToggle");
+
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        body.classList.add("light-theme");
+        toggle.textContent = "☀";
+    }
+
+    toggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        const light = body.classList.contains("light-theme");
+        toggle.textContent = light ? "☀" : "🌙";
+        localStorage.setItem("theme", light ? "light" : "dark");
+    });
+})();
+
+// Order form → WhatsApp
+document.getElementById("orderForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value.trim();
+    const duration = document.getElementById("duration").value.trim();
+    const language = document.getElementById("language").value.trim();
+    const budget = document.getElementById("budget").value.trim();
+    const details = document.getElementById("details").value.trim();
+
+    if (!name || !phone || !service) {
+        alert("Please fill at least Name, WhatsApp Number and Service.");
+        return;
+    }
+
+    let msg = `New AI Order from AI Market website:%0A%0A`;
+    msg += `Name: ${name}%0A`;
+    msg += `Customer WhatsApp: ${phone}%0A`;
+    msg += `Service: ${service}%0A`;
+    if (duration) msg += `Length: ${duration}%0A`;
+    if (language) msg += `Language: ${language}%0A`;
+    if (budget) msg += `Budget: ₹${budget}%0A`;
+    if (details) msg += `%0ADetails:%0A${encodeURIComponent(details)}%0A`;
+
+    const ownerNumber = "919676142165"; // your WhatsApp
+    const url = `https://wa.me/${ownerNumber}?text=${msg}`;
+
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
