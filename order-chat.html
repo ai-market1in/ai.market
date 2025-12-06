@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Order Bot - AI Market</title>
-
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.png" />
 </head>
@@ -27,7 +26,7 @@
             <a href="ai-music-tools.html">Music Tools</a>
             <a href="pricing.html">Pricing</a>
             <a href="estimator.html">Estimator</a>
-            <a href="order.html">Order</a>
+            <a class="active" href="order.html">Order</a>
             <a href="donate.html">Donate</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="blog.html">Blog</a>
@@ -56,7 +55,9 @@
             background:#020617;
             border:1px solid #1e293b;
             margin-bottom:10px;
-            font-size:14px;">
+            font-size:14px;
+            display:flex;
+            flex-direction:column;">
         </div>
 
         <input id="chatInput" type="text" placeholder="Type your answer and press Enter"
@@ -138,6 +139,7 @@
         div.style.maxWidth = "90%";
         div.style.padding = "8px 10px";
         div.style.borderRadius = "10px";
+        div.style.whiteSpace = "pre-wrap";
         if (from === "bot") {
             div.style.background = "#111827";
             div.style.alignSelf = "flex-start";
@@ -153,7 +155,6 @@
     function nextQuestion() {
         let q = questions[state.step];
         if (!q) return;
-
         if (state.step === 1) {
             q = q.replace("{name}", state.name || "friend");
         }
@@ -175,7 +176,6 @@
         state.step++;
 
         if (state.step === questions.length - 1) {
-            // Last info collected, show final message & WhatsApp button
             nextQuestion();
             waBtn.style.display = "inline-block";
         } else if (state.step < questions.length - 1) {
@@ -209,7 +209,6 @@
         window.open(url, "_blank");
     });
 
-    // start
     nextQuestion();
 })();
 </script>
