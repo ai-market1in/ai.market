@@ -51,7 +51,7 @@
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
 
           <label for="phone">WhatsApp Number (with country code)</label>
-          <input type="tel" id="phone" placeholder="+91XXXXXXXXXX" required
+          <input type="tel" id="phone" placeholder="+1XXXXXXXXXX" required
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
 
           <label for="service">Select Service</label>
@@ -79,22 +79,18 @@
               <option>Up to 60 seconds</option>
           </select>
 
-          <label for="language">Preferred Language (for text/voice)</label>
-          <select id="language"
+          <!-- LANGUAGE: free text for worldwide support -->
+          <label for="language">Preferred Language(s)</label>
+          <input type="text" id="language"
+              placeholder="Any language (e.g., English, Spanish, Japanese)"
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
-              <option>English</option>
-              <option>Telugu</option>
-              <option>Tamil</option>
-              <option>Hindi</option>
-              <option>Mixed</option>
-          </select>
 
           <label for="budget">Approx. Budget (optional)</label>
           <input type="number" id="budget" placeholder="e.g. 299"
               style="width:100%;margin:6px 0 14px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;">
 
           <label for="details">Project Details</label>
-          <textarea id="details" rows="4" placeholder="Example: I want a 30 sec devotional video with Telugu song and name title."
+          <textarea id="details" rows="4" placeholder="Example: I want a 30 sec video in English & Spanish with logo and name title."
               style="width:100%;margin:6px 0 18px;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e5e7eb;"></textarea>
 
           <button type="submit" class="btn-primary" style="width:100%;text-align:center;">
@@ -161,8 +157,8 @@ document.getElementById("orderForm").addEventListener("submit", function (e) {
     msg += `Customer WhatsApp: ${phone}%0A`;
     msg += `Service: ${service}%0A`;
     if (duration) msg += `Length: ${duration}%0A`;
-    if (language) msg += `Language: ${language}%0A`;
-    if (budget) msg += `Budget: ₹${budget}%0A`;
+    if (language) msg += `Language(s): ${language}%0A`;
+    if (budget) msg += `Budget: $${budget} (or equivalent)%0A`;
     if (details) msg += `%0ADetails:%0A${encodeURIComponent(details)}%0A`;
 
     const ownerNumber = "919676142165";
