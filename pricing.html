@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donate - AI Market</title>
+    <title>Pricing - AI Market</title>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.png" />
 
     <!-- Google Analytics (optional) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){ dataLayer.push(arguments); }
       gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXXX");
+      gtag("config", "G-XXXXXXXXXX");
     </script>
 </head>
 
@@ -23,7 +23,7 @@
 <!-- HEADER -->
 <header>
     <div class="logo-wrap">
-        <img src="logo.png" class="logo" alt="AI Market logo">
+        <img src="logo.png" class="logo" alt="AI Market logo" />
         <div class="logo-text">
             <span class="site-name">AI Market</span>
             <span class="tagline">World’s Smart AI Platform</span>
@@ -34,8 +34,8 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="ai-tools.html">AI Tools</a>
-            <a href="pricing.html">Pricing</a>
-            <a class="active" href="donate.html">Donate</a>
+            <a class="active" href="pricing.html">Pricing</a>
+            <a href="donate.html">Donate</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -46,61 +46,76 @@
     </div>
 </header>
 
-<!-- DONATE SECTION -->
+<!-- PRICING PAGE -->
 <section class="page">
-    <h1 class="section-title">Support AI Market</h1>
+    <h1 class="section-title">Pricing Plans</h1>
     <p class="section-subtitle">
-        Your contribution helps us build more AI tools and offer free features to users.
-        <br>Choose any donation amount below.
+        Choose a plan that matches your content needs.  
+        All payments are securely processed via Razorpay.
     </p>
 
     <div class="price-grid">
 
-        <!-- 99 Donation -->
-        <div class="donate-card">
-            <h2>₹99 Support</h2>
-            <p>A small contribution to help us grow.</p>
-            <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary" target="_blank">Donate ₹99</a>
+        <!-- STARTER -->
+        <div class="price-card">
+            <span class="badge">Starter</span>
+            <h2>Basic Reel</h2>
+            <div class="price-amount">₹99</div>
+            <p>Perfect for 1 simple reel or short status video.</p>
+
+            <ul>
+                <li>Up to 15 seconds</li>
+                <li>1 audio/song</li>
+                <li>Basic transitions & effects</li>
+            </ul>
+
+            <a href="https://rzp.io/rzp/MoQmtvPr" class="btn-primary" target="_blank">
+                Pay ₹99
+            </a>
         </div>
 
-        <!-- 299 Donation -->
-        <div class="donate-card">
-            <h2>₹299 Support</h2>
-            <p>Support development of new features and tools.</p>
-            <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank">Donate ₹299</a>
+        <!-- PRO -->
+        <div class="price-card">
+            <span class="badge">Most Popular</span>
+            <h2>Pro Creator</h2>
+            <div class="price-amount">₹299</div>
+            <p>Ideal for regular content creators & small businesses.</p>
+
+            <ul>
+                <li>Up to 30 seconds</li>
+                <li>Advanced effects & motion</li>
+                <li>Custom text & branding</li>
+                <li>1 free revision</li>
+            </ul>
+
+            <a href="https://rzp.io/rzp/mMXyAH0p" class="btn-primary" target="_blank">
+                Pay ₹299
+            </a>
         </div>
 
-        <!-- 999 Donation -->
-        <div class="donate-card">
-            <h2>₹999 Support</h2>
-            <p>Big support for long-term development and upgrades.</p>
-            <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank">Donate ₹999</a>
-        </div>
+        <!-- PREMIUM -->
+        <div class="price-card">
+            <span class="badge">Premium</span>
+            <h2>Brand Package</h2>
+            <div class="price-amount">₹999</div>
+            <p>For brands, agencies and heavy usage.</p>
 
+            <ul>
+                <li>Up to 60 seconds</li>
+                <li>Multiple scenes & variations</li>
+                <li>Priority delivery</li>
+                <li>Advanced customization</li>
+            </ul>
+
+            <a href="https://rzp.io/rzp/67BhfxGW" class="btn-primary" target="_blank">
+                Pay ₹999
+            </a>
+        </div>
     </div>
-
-    <br><br>
-    <h2 style="text-align:center;">Custom Donation</h2>
-    <p style="text-align:center;opacity:0.8;">Enter your own amount and donate securely.</p>
-
-    <div class="donate-card" style="max-width:400px;margin:auto;margin-top:20px;">
-        <input type="number" id="customAmount" placeholder="Enter amount (₹)" style="
-            width:100%;
-            padding:12px;
-            margin-bottom:10px;
-            border-radius:8px;
-            border:1px solid #334155;
-            background:#0f172a;
-            color:#fff;
-        ">
-
-        <a id="customPayBtn" href="#" class="btn-primary" target="_blank">Donate</a>
-    </div>
-
 </section>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20need%20help%20with%20donations."
+<a href="https://wa.me/919676142165?text=Hi%20AI%20Market,%20I%20have%20a%20question%20about%20pricing."
    class="whatsapp-float" target="_blank">💬</a>
 
 <!-- FOOTER -->
@@ -114,9 +129,8 @@
     <a href="cookies.html">Cookies</a>
 </footer>
 
-<!-- THEME + CUSTOM DONATION SCRIPT -->
+<!-- THEME SCRIPT -->
 <script>
-// Theme toggle
 (function () {
     const body = document.body;
     const toggle = document.getElementById("themeToggle");
@@ -134,17 +148,6 @@
         localStorage.setItem("theme", light ? "light" : "dark");
     });
 })();
-
-// Custom donation button
-document.getElementById("customPayBtn").addEventListener("click", function(e) {
-    const amount = document.getElementById("customAmount").value.trim();
-    if (!amount || amount < 1) {
-        alert("Please enter a valid amount.");
-        e.preventDefault();
-        return;
-    }
-    this.href = `https://rzp.io/rzp/donateaimarket?amount=${amount}`;
-});
 </script>
 
 </body>
