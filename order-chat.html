@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Order Bot - AI Market</title>
+
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.png" />
 </head>
@@ -139,13 +140,13 @@
         div.style.maxWidth = "90%";
         div.style.padding = "8px 10px";
         div.style.borderRadius = "10px";
-        div.style.whiteSpace = "pre-wrap";
         if (from === "bot") {
             div.style.background = "#111827";
             div.style.alignSelf = "flex-start";
         } else {
             div.style.background = "#1d4ed8";
             div.style.alignSelf = "flex-end";
+            div.style.color = "#e5e7eb";
         }
         div.textContent = text;
         chat.appendChild(div);
